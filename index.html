@@ -68,12 +68,7 @@
     transform: translateX(-50%) !important; /* adjust for center */
   }
 }
-@media (max-width: 768px) {
-  .contact-wrapper div:first-child {
-    padding: 0.75rem 1.5rem !important; /* bigger button for touch */
-    font-size: 0.9rem !important;
-  }
-}
+
 
 </style>
 
@@ -280,6 +275,42 @@ The Smart Money Manager Chatbot is a web-based application that combines persona
 
 
   <script>
+
+    // Only apply visual fade animations if screen is small/medium
+if (window.innerWidth <= 1024) {
+  const sections = [
+    "#skills",
+    ".projects-sec",
+    ".about-sec",
+    ".experience-sec"
+  ];
+
+  sections.forEach((section) => {
+    gsap.to(".visual-img", {
+      opacity: 0.1, // fade out
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 50%", // when section is halfway into view
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  });
+
+  // Fade back in after sections if needed
+  gsap.to(".visual-img", {
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".experience-sec",
+      start: "bottom bottom",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+}
+
 
 
 if (window.innerWidth >= 768) {
