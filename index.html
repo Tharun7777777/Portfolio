@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- LENIS Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundle.min.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<style>
+  
+  /* Contact box subtle glow */
+.group:hover div:first-child {
+  box-shadow: 0 0 12px rgba(229, 230, 233, 0.216);
+}
+
+</style>
+
+
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- FULL BACKGROUND VIDEO -->
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    class="fixed top-0 left-0 w-full h-full object-cover -z-10"
+  >
+    <source src="chat-bg3.mp4" type="video/mp4">
+  </video>
+
+  <!-- DARK OVERLAY -->
+  <div class="fixed top-0 left-0 w-full h-full bg-black/60 -z-0"></div>
+
+  <!-- HERO SECTION -->
+
+
+
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative z-10">
+    
+    <h1 class="text-5xl md:text-7xl font-bold hero-title">
+      Hey, I am <span class="text-blue-400">Tharun</span>
+    </h1>
+
+    <h1 class="text-6xl md:text-8xl font-extrabold leading-tight mt-10 hero-title">
+      CODE<br>DESIGN<br>INNOVATE
+    </h1>
+
+  </section>
+
+  <!-- CINEMATIC DIVIDER -->
+  <div class="w-full h-px bg-neutral-800 my-20"></div>
+
+  <!-- BIG HEADING SECTION -->
+
+   <!-- STATIC VISUAL IMAGE (PINNED) -->
+<div class="fixed right-10 top-1/2 -translate-y-1/2 w-[350px] md:w-[450px] pointer-events-none z-20 visual-wrap will-change-transform">
+  <img src="big_visual_1 - Copy.png" class="w-full visual-img">
+</div>
+
+  <section id="skills" class="py-40 px-8 text-left relative z-10">
+
+ <h2 class="text-4xl font-semibold mb-16 ml-8">Skills / Tech Stack</h2>
+
+  <div id="skills-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
+    <!-- Each skill box -->
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">
+      Java
+    </div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">Python</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">AI Fluency</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">C Programming</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">HTML</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">Node JS</div>
+    <div class="skill-box  bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">JavaScript</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">React JS</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">CSS</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">PHP</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">SQL</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">Blockchain</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">Excel</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">Microsoft PowerPoint</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">Project Management</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">Git / GitHub</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">Problem Solving</div>
+    <div class="skill-box bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-md 
+                text-sm uppercase tracking-widest transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] cursor-default select-none">OOP</div>
+  </div>
+
+ 
+  <!-- ABOUT SECTION -->
+  <section class="py-32 px-8 about-sec">
+    <h2 class="text-4xl font-semibold mb-6">About Me</h2>
+    <p class="max-w-2xl text-gray-300">
+      Passionate BTech IT student specializing in AI-driven software and full-stack web development. Experienced in 
+building intelligent web apps integrating chatbots and data visualization. Strong problem-solving mindset with 
+proven ability to deliver efficient, user-centric solutions. Seeking opportunities to contribute to AI-powered product 
+development and advance innovation in tech.
+    </p>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="py-32 px-8 projects-sec">
+    <h2 class="text-7xl md:text-9xl font-extrabold opacity-20 tracking-tight big-title">
+      PROJECTS
+    </h2>
+  </section>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <div class="p-6 bg-neutral-900 rounded-3xl project-card">
+        <h3 class="text-2xl mb-4">G-Graph</h3>
+        <p class="text-gray-300">About
+The Smart Money Manager Chatbot is a web-based application that combines personal finance management with an interactive chatbot assistant. It allows users to seamlessly track their income, expenses, and savings while receiving personalized insights and assistance through a conversational interface.</p>
+<br><hr><br>
+<a href="https://g-graph.netlify.app/" target="_blank" 
+   class="text-blue-400 hover:underline mt-2 inline-block">
+   View Project
+</a>
+      
+</div>
+
+      <div class="p-6 bg-neutral-900 rounded-3xl project-card">
+        <h3 class="text-2xl mb-4">Smart Library Management System with AI Chatbot </h3>
+        <p class="text-gray-300">The AI-Powered Library Assistant is a web-based system that helps users quickly locate books using a chatbot interface. It indexes books by physical location and allows users to search via natural language queries, providing availability and precise location details, improving librarian efficiency and user experience.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+<section class="py-32 px-8 experience-sec relative z-10">
+  <h2 class="text-4xl font-semibold mb-12">Experience</h2>
+
+  <div class="space-y-10 max-w-3xl">
+    <!-- EXPERIENCE CARD 1 -->
+<div class="bg-neutral-900/60 backdrop-blur-md p-8 rounded-3xl border border-neutral-800 hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300">
+      <h3 class="text-2xl font-bold text-white-400">Python Developer Intern — Cognifyz</h3>
+      <p class="text-gray-400 text-sm mt-2">May 2024 – July 2024</p>
+      <p class="text-gray-300 mt-4 leading-relaxed">
+        Developed and optimized Python scripts for data automation. 
+        Worked on backend logic and contributed to API integrations 
+        while ensuring clean, efficient code and version control through Git.
+      </p>
+    </div>
+
+    <!-- EXPERIENCE CARD 2 -->
+<div class="bg-neutral-900/60 backdrop-blur-md p-8 rounded-3xl border border-neutral-800 hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300">
+      <h3 class="text-2xl font-bold text-white-400">Decor Team — SWO (Student Welfare Organization)</h3>
+      <p class="text-gray-400 text-sm mt-2">2023</p>
+      <p class="text-gray-300 mt-4 leading-relaxed">
+        Led the decor team for campus events, handling design planning and 
+        creative execution to enhance visual impact across multiple venues.
+      </p>
+    </div>
+  </div>
+</section>
+<div class="contact-wrapper fixed top-6 left-6 z-50 group" id="contactWrapper">
+  <div 
+    class="bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-md 
+           text-sm uppercase tracking-widest transition-all duration-300 
+           group-hover:bg-white/20 group-hover:scale-105 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.4)] 
+           cursor-pointer select-none">
+    + Contact
+  </div>
+
+  <div id="contactMenu"
+    class="absolute top-[60px] left-0 bg-black/70 backdrop-blur-xl border border-white/10 
+           p-4 rounded-md opacity-0 scale-95 pointer-events-none transition-all duration-300 
+           group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto">
+    <ul class="space-y-2 text-gray-300 text-sm">
+      <li><a href="mailto:tharun.palanivelu@example.com" class="hover:text-blue-400 transition">✉️ Email</a></li>
+      <li><a href="https://linkedin.com/in/tharun-palanivelu" target="_blank" class="hover:text-blue-400 transition">💼 LinkedIn</a></li>
+      <li><a href="https://github.com/tharun-palanivelu" target="_blank" class="hover:text-blue-400 transition">💻 GitHub</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+  <script>
+gsap.timeline({
+  scrollTrigger: {
+    trigger: "body",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+    invalidateOnRefresh: true,
+  }
+})
+.to(".visual-img", { y: -60, rotate: 5, scale: 1.05 })       // initial parallax
+.to(".visual-img", { y: -120, rotate: -5, scale: 1.1 })      // mid scroll
+.to(".visual-img", { y: -160, rotate: 0, scale: 1.15 })      // later scroll
+.to(".visual-img", { opacity: 0.1, duration: 1, ease: "none", scrollTrigger: {
+    trigger: "#skills",
+    start: "top 50%",
+    end: "bottom top",
+    scrub: true
+  }
+})
+.to(".visual-img", { opacity: 0.1, duration: 1, ease: "none", scrollTrigger: {
+    trigger: ".projects-sec",
+    start: "top 50%",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+// Fade visual image near Skills
+gsap.to(".visual-img", {
+  opacity: 0.1, // fades out to near invisible
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#skills",
+    start: "top 50%", // when skills section is halfway into view
+    end: "bottom top", // fade until the section ends
+    scrub: true, // smooth animation
+  }
+});
+
+// Fade visual image near Projects
+gsap.to(".visual-img", {
+  opacity: 0.1,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".projects-sec",
+    start: "top 50%",
+    end: "bottom top",
+    scrub: true,
+  }
+});
+
+// Optionally, bring it back after these sections
+gsap.to(".visual-img", {
+  opacity: 1,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".experience-sec",
+    start: "top bottom", // when experience section enters view
+    end: "top top",
+    scrub: true,
+  }
+});
+
+
+
+//skills
+gsap.utils.toArray(".skill-box").forEach((box, i) => {
+  gsap.fromTo(box,
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      delay: i * 0.05,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#skills",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      }
+    }
+  );
+});
+
+    // CONTACT BUTTON LOGIC (3-sec visible delay)
+const wrapper = document.getElementById("contactWrapper");
+const menu = document.getElementById("contactMenu");
+let hideTimeout;
+
+wrapper.addEventListener("mouseenter", () => {
+  clearTimeout(hideTimeout);
+  menu.classList.add("opacity-100", "scale-100", "pointer-events-auto");
+  menu.classList.remove("opacity-0", "scale-95", "pointer-events-none");
+});
+
+wrapper.addEventListener("mouseleave", () => {
+  hideTimeout = setTimeout(() => {
+    menu.classList.remove("opacity-100", "scale-100", "pointer-events-auto");
+    menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+  }, 3000); // stays for 3 seconds
+});
+
+
+gsap.from(".group", {
+  opacity: 0,
+  y: -20,
+  duration: 1,
+  delay: 0.5,
+  ease: "power2.out"
+});
+
+
+/* Experience fade-in animation */
+gsap.from(".experience-sec", {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".experience-sec",
+    start: "top 80%"
+  }
+});
+
+/* Subtle floating reveal for each experience card */
+gsap.utils.toArray(".experience-sec div").forEach((card, i) => {
+  gsap.from(card, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    delay: i * 0.2,
+    scrollTrigger: {
+      trigger: card,
+      start: "top 85%"
+    }
+  });
+});
+
+
+/* LOAD ANIMATION (cinematic aesthetic) */
+gsap.from(".visual-img", {
+  opacity: 0,
+  y: 80,
+  scale: 0.7,
+  rotate: -10,
+  duration: 1.4,
+  ease: "power3.out"
+});
+
+gsap.to(".visual-img", {
+  y: -200,
+  scale: 1.15,
+  rotate: 5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: document.body,
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1,
+    invalidateOnRefresh: true
+  }
+});
+
+
+
+
+/* SCROLL ANIMATION 1 – slight parallax + tilt */
+gsap.to(".visual-img", {
+  y: -60,
+  rotate: 5,
+  scale: 1.05,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "body",
+    start: "top top",
+    end: "40% top",
+    scrub: true
+  }
+});
+
+
+/* SCROLL ANIMATION 2 – reverse tilt + float */
+gsap.to(".visual-img", {
+  y: -120,
+  rotate: -5,
+  scale: 1.1,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "body",
+    start: "40% top",
+    end: "80% top",
+    scrub: true
+  }
+});
+
+
+/* SCROLL ANIMATION 3 – final smooth drift */
+gsap.to(".visual-img", {
+  y: -160,
+  rotate: 0,
+  scale: 1.15,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "body",
+    start: "80% top",
+    end: "bottom bottom",
+    scrub: true
+  }
+});
+
+let visualAnim = gsap.to(".visual-img", {
+  y: -250,
+  rotate: 8,
+  scale: 1.18,
+  ease: "none",
+  scrollTrigger: {
+    start: 0,
+    end: "max",
+    scrub: true,
+    invalidateOnRefresh: true,
+  }
+});
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* Smooth scroll */
+    const lenis = new Lenis({
+      duration: 1.2,
+      smooth: true,
+      easing: t => 1 - Math.pow(1 - t, 3)
+    });
+
+    lenis.on('scroll', (e) => {
+  ScrollTrigger.update();
+});
+
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+
+    /* Hero title animation */
+    gsap.from(".hero-title", {
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      stagger: 0.2
+    });
+
+    /* Big title animation */
+    gsap.from(".big-title", {
+      opacity: 0,
+      y: 80,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".big-title",
+        start: "top 80%"
+      }
+    });
+
+    /* About fade */
+    gsap.from(".about-sec", {
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".about-sec",
+        start: "top 80%"
+      }
+    });
+
+    /* Projects fade */
+    gsap.from(".projects-sec", {
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".projects-sec",
+        start: "top 80%"
+      }
+    });
+  </script>
+
+</body>
+</html>
