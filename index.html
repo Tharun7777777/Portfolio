@@ -14,11 +14,65 @@
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <style>
   
   /* Contact box subtle glow */
 .group:hover div:first-child {
   box-shadow: 0 0 12px rgba(229, 230, 233, 0.216);
+}
+  /* Hide pinned visual on small screens */
+  @media (max-width: 768px) {
+    .visual-wrap {
+      display: none;
+    }
+
+    .hero-title {
+      font-size: 2.5rem !important; /* smaller hero on mobile */
+    }
+
+    .big-title {
+      font-size: 4rem !important;
+    }
+
+    #skills-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .project-card {
+      padding: 1.5rem !important;
+    }
+
+    .contact-wrapper {
+      top: auto !important;
+      bottom: 2rem !important;
+      left: 50% !important;
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Reduce heavy shadows and scale for mobile */
+  @media (max-width: 640px) {
+    .skill-box:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+  /* Mobile contact button positioning */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    top: auto !important;      /* remove top position */
+    bottom: 2rem !important;   /* 2rem from bottom */
+    left: 50% !important;      /* center horizontally */
+    transform: translateX(-50%) !important; /* adjust for center */
+  }
+}
+@media (max-width: 768px) {
+  .contact-wrapper div:first-child {
+    padding: 0.75rem 1.5rem !important; /* bigger button for touch */
+    font-size: 0.9rem !important;
+  }
 }
 
 </style>
@@ -226,32 +280,24 @@ The Smart Money Manager Chatbot is a web-based application that combines persona
 
 
   <script>
-gsap.timeline({
-  scrollTrigger: {
-    trigger: "body",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: true,
-    invalidateOnRefresh: true,
-  }
-})
-.to(".visual-img", { y: -60, rotate: 5, scale: 1.05 })       // initial parallax
-.to(".visual-img", { y: -120, rotate: -5, scale: 1.1 })      // mid scroll
-.to(".visual-img", { y: -160, rotate: 0, scale: 1.15 })      // later scroll
-.to(".visual-img", { opacity: 0.1, duration: 1, ease: "none", scrollTrigger: {
-    trigger: "#skills",
-    start: "top 50%",
-    end: "bottom top",
-    scrub: true
-  }
-})
-.to(".visual-img", { opacity: 0.1, duration: 1, ease: "none", scrollTrigger: {
-    trigger: ".projects-sec",
-    start: "top 50%",
-    end: "bottom top",
-    scrub: true
-  }
-});
+
+
+if (window.innerWidth >= 768) {
+  // All GSAP visual-img animations only for tablets and desktops
+  gsap.to(".visual-img", {
+    y: -200,
+    scale: 1.15,
+    rotate: 5,
+    ease: "none",
+    scrollTrigger: {
+      trigger: document.body,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1,
+    }
+  });
+}
+
 
 // Fade visual image near Skills
 gsap.to(".visual-img", {
